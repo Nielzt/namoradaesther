@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Valentine's Day Mural</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Montserrat:wght@300;400&family=Dancing+Script:wght@700&display=swap" rel="stylesheet">
+    <style>
+        .heart {
+            animation: float 6s ease-in-out infinite;
+        }
+        @keyframes float {
+            0%, 100% { transform: translateY(0) rotate(0deg); }
+            50% { transform: translateY(-20px) rotate(5deg); }
+        }
+        .sparkle {
+            animation: sparkle 2s ease-in-out infinite;
+            opacity: 0;
+        }
+        @keyframes sparkle {
+            0%, 100% { opacity: 0; transform: scale(0.5); }
+            50% { opacity: 0.8; transform: scale(1); }
+        }
+        .btn-glow:hover {
+            box-shadow: 0 0 15px 5px rgba(255, 192, 203, 0.8);
+        }
+        .polaroid {
+            transform: rotate(-5deg);
+            transition: all 0.3s ease;
+        }
+        .polaroid:hover {
+            transform: rotate(0deg) scale(1.05);
+        }
+        .watercolor-bg {
+            background-image: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiPgogIDxmaWx0ZXIgaWQ9Im5vaXNlIj4KICAgIDxmZVR1cmJ1bGVuY2UgdHlwZT0iZnJhY3RhbE5vaXNlIiBiYXNlRnJlcXVlbmN5PSIwLjA1IiBudW1PY3RhdmVzPSIzIiBzdGl0Y2hUaWxlcz0ic3RpdGNoIi8+CiAgICA8ZmVDb2xvck1hdHJpeCB0eXBlPSJtYXRyaXgiIHZhbHVlcz0iMSAwIDAgMCAwIDAgMSAwIDAgMCAwIDAgMSAwIDAgMCAwIDAgMC4xNSAwIi8+CiAgPC9maWx0ZXI+CiAgPHJlY3Qgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgZmlsdGVyPSJ1cmwoI25vaXNlKSIgb3BhY2l0eT0iMC4xNSIvPgo8L3N2Zz4='), 
+                            linear-gradient(to bottom, rgba(255,245,245,1) 0%, rgba(255,230,230,1) 100%);
+            background-blend-mode: overlay;
+        }
+    </style>
+</head>
+<body class="min-h-screen font-montserrat flex flex-col">
+    <!-- Header -->
+    <header class="bg-rose-100 py-4 shadow-md">
+        <div class="container mx-auto px-4 flex justify-center">
+            <h1 class="text-3xl md:text-4xl font-playfair text-rose-800 font-bold italic">Feliz dia dos namorados para a minha namorada Esther, a mais bela e perfeita</h1>
+        </div>
+    </header>
+
+    <!-- Main Mural -->
+    <main class="flex-grow watercolor-bg relative overflow-hidden">
+        <!-- Floating Hearts -->
+        <div class="absolute top-10 left-1/4 heart text-4xl text-rose-400" style="animation-delay: 0s;">❤️</div>
+        <div class="absolute top-1/4 right-1/4 heart text-2xl text-red-400" style="animation-delay: 1s;">❤️</div>
+        <div class="absolute top-1/3 left-1/6 heart text-3xl text-rose-300" style="animation-delay: 2s;">❤️</div>
+        <div class="absolute top-1/2 right-10 heart text-4xl text-rose-500" style="animation-delay: 3s;">❤️</div>
+        <div class="absolute bottom-1/4 left-10 heart text-5xl text-red-300" style="animation-delay: 4s;">❤️</div>
+        <div class="absolute bottom-10 right-1/4 heart text-4xl text-gold-400" style="animation-delay: 5s;">❤️</div>
+
+        <!-- Sparkles -->
+        <div class="absolute top-20 right-20 sparkle" style="animation-delay: 0.5s;">✨</div>
+        <div class="absolute top-32 left-32 sparkle" style="animation-delay: 1.5s;">✨</div>
+        <div class="absolute bottom-24 left-24 sparkle" style="animation-delay: 2.5s;">✨</div>
+        <div class="absolute bottom-32 right-32 sparkle" style="animation-delay: 3.5s;">✨</div>
+
+        <!-- Main Content -->
+        <div class="container mx-auto px-4 py-8 relative z-10">
+            <div class="flex flex-col lg:flex-row gap-8">
+                <!-- Main Heart Photo Frame -->
+                <div class="flex-1 flex justify-center">
+                    <div class="relative w-64 h-64 md:w-80 md:h-80">
+                        <div class="absolute inset-0 rounded-full bg-gradient-to-br from-rose-200 to-rose-300 transform rotate-45"></div>
+                        <div class="absolute inset-2 rounded-full bg-white transform rotate-45 border-4 border-gold-200 shadow-lg flex items-center justify-center">
+                            <img src="https://i.ibb.co/JRJQXDrQ/IMG-20250608-WA0020.jpg" alt="Foto Principal" class="w-full h-full object-cover rounded-full transform -rotate-45">
+                        </div>
+                        <div class="absolute -inset-2 border-2 border-gold-200 rounded-full transform rotate-45 filter blur-sm shadow-xl opacity-70"></div>
+                    </div>
+                </div>
+
+                <!-- Polaroid Photos -->
+                <div class="flex-1 grid grid-cols-2 gap-4">
+                    <div class="polaroid bg-white p-2 shadow-lg">
+                        <div class="bg-rose-100 h-32 md:h-40 flex items-center justify-center">
+                            <img src="https://i.ibb.co/DHMVVXNb/IMG-20250126-WA0004-1.jpg" alt="Você é linda" class="w-full h-full object-cover">
+                        </div>
+                        <div class="pt-1 text-xs text-gray-700 text-center">Amor da minha vida</div>
+                    </div>
+                    <div class="polaroid bg-white p-2 shadow-lg">
+                        <div class="bg-rose-100 h-32 md:h-40 flex items-center justify-center">
+                            <img src="https://i.ibb.co/Fb983NDH/IMG-20240804-WA0022.jpg" alt="Perfeição" class="w-full h-full object-cover">
+                        </div>
+                        <div class="pt-1 text-xs text-gray-700 text-center">Perfeita</div>
+                    </div>
+                    <div class="polaroid bg-white p-2 shadow-lg">
+                        <div class="bg-rose-100 h-32 md:h-40 flex items-center justify-center">
+                            <img src="https://i.ibb.co/Y4xYwf6J/IMG-20230607-WA0073.jpg" alt="Minha paixão" class="w-full h-full object-cover">
+                        </div>
+                        <div class="pt-1 text-xs text-gray-700 text-center">rsrsrs</div>
+                    </div>
+                    <div class="polaroid bg-white p-2 shadow-lg">
+                        <div class="bg-rose-100 h-32 md:h-40 flex items-center justify-center">
+                            <img src="https://i.ibb.co/JRJQXDrQ/IMG-20250608-WA0020.jpg" alt="Beleza divina" class="w-full h-full object-cover">
+                        </div>
+                        <div class="pt-1 text-xs text-gray-700 text-center">Deus caprichou</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Quotes Section -->
+            <div class="mt-12 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <div class="bg-white/70 backdrop-blur-md p-6 rounded-lg shadow-md border border-rose-50">
+                    <p class="font-dancing text-xl text-rose-800 italic">"Desde que você chegou, minha vida floresceu."</p>
+                    <div class="mt-2 h-1 bg-gradient-to-r from-rose-100 to-transparent"></div>
+                </div>
+                <div class="bg-white/70 backdrop-blur-md p-6 rounded-lg shadow-md border border-rose-50">
+                    <p class="font-dancing text-xl text-rose-800 italic">"Você é poesia em forma de mulher."</p>
+                    <div class="mt-2 h-1 bg-gradient-to-r from-rose-100 to-transparent"></div>
+                </div>
+                <div class="bg-white/70 backdrop-blur-md p-6 rounded-lg shadow-md border border-rose-50">
+                    <p class="font-dancing text-xl text-rose-800 italic">"Amar você é minha oração preferida."</p>
+                    <div class="mt-2 h-1 bg-gradient-to-r from-rose-100 to-transparent"></div>
+                </div>
+                <div class="bg-white/70 backdrop-blur-md p-6 rounded-lg shadow-md border border-rose-50">
+                    <p class="font-dancing text-xl text-rose-800 italic">"Obrigado, Deus, por me dar o privilégio de viver esse amor."</p>
+                    <div class="mt-2 h-1 bg-gradient-to-r from-rose-100 to-transparent"></div>
+                </div>
+            </div>
+
+            <!-- Flowers Decoration -->
+            <div class="mt-12 flex justify-center space-x-4 md:space-x-8 text-3xl md:text-4xl opacity-80">
+                <span class="text-red-200">🌹</span>
+                <span class="text-pink-200">🌸</span>
+                <span class="text-rose-200">🌺</span>
+                <span class="text-pink-300">💐</span>
+                <span class="text-red-300">🏵️</span>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer with Circular Photo -->
+    <footer class="bg-rose-100 py-6 shadow-inner">
+        <div class="container mx-auto px-4 flex flex-col items-center">
+            <div class="relative mb-4">
+                <div class="w-24 h-24 md:w-32 md:h-32 rounded-full border-4 border-gold-200 bg-white shadow-lg flex items-center justify-center relative">
+                    <div class="absolute inset-0 rounded-full border-2 border-black opacity-20"></div>
+                    <img src="https://i.ibb.co/jvkLYxdZ/IMG-20250602-202706248.jpg" alt="Nossas fotos" class="w-full h-full object-cover rounded-full">
+                </div>
+                <div class="absolute -inset-2 border border-gold-200 rounded-full opacity-50 filter blur-sm shadow-xl"></div>
+            </div>
+            <p class="text-rose-800 font-playfair italic text-lg">Feliz Dia dos Namorados</p>
+            <button class="mt-4 px-6 py-2 bg-gradient-to-r from-rose-400 to-rose-600 text-white rounded-full font-medium shadow-md transition-all duration-300 btn-glow">
+                ❤️ do seu Namorado apaixoando
+            </button>
+        </div>
+    </footer>
+
+    <script>
+        // Make hearts interactive
+        document.addEventListener('DOMContentLoaded', function() {
+            const hearts = document.querySelectorAll('.heart');
+            const sparkles = document.querySelectorAll('.sparkle');
+
+            hearts.forEach(heart => {
+                heart.addEventListener('mouseover', function() {
+                    this.style.transform = 'scale(1.5) rotate(10deg)';
+                    this.style.transition = 'all 0.3s ease';
+                });
+                heart.addEventListener('mouseout', function() {
+                    this.style.transform = '';
+                });
+            });
+
+            // Random movement for sparkles
+            setInterval(() => {
+                sparkles.forEach(sparkle => {
+                    if(Math.random() > 0.7) {
+                        sparkle.style.left = `${Math.random() * 95}%`;
+                        sparkle.style.top = `${Math.random() * 95}%`;
+                    }
+                });
+            }, 3000);
+        });
+    </script>
+<p style="border-radius: 8px; text-align: center; font-size: 12px; color: #fff; margin-top: 16px;position: fixed; left: 8px; bottom: 8px; z-index: 10; background: rgba(0, 0, 0, 0.8); padding: 4px 8px;">Made with <img src="https://enzostvs-deepsite.hf.space/logo.svg" alt="DeepSite Logo" style="width: 16px; height: 16px; vertical-align: middle;display:inline-block;margin-right:3px;filter:brightness(0) invert(1);"><a href="https://enzostvs-deepsite.hf.space" style="color: #fff;text-decoration: underline;" target="_blank" >DeepSite</a> - 🧬 <a href="https://enzostvs-deepsite.hf.space?remix=Nielzt/muie" style="color: #fff;text-decoration: underline;" target="_blank" >Remix</a></p></body>
+</html>
